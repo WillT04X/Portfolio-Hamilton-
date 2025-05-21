@@ -1,0 +1,519 @@
+/* Base layout and typography for the page */
+body {
+  background-color: #f4f4f4; /* Light gray background */
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+  color: #333; /* Dark gray text color */
+  line-height: 1.6; /* Line height for readability */
+  margin: 0; /* Remove default margin */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  padding: 0; /* Remove default padding */
+}
+
+/* Adjusting padding to prevent overlap with fixed header */
+.main-content {
+  padding-top: 250px; 
+}
+
+/* Header styling */
+.header {
+  position: fixed; /* Fix header at the top of the page */
+  top: 0; 
+  width: 100%; /* Full width */
+  background-color: #f9221c; /* Red background color */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  padding: 15px; 
+  z-index: 1000; /* Ensure it stays above other elements */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Subtle shadow */
+  border: solid white 5px; /* White border */
+  box-sizing: border-box; /* Include border in width/height calculations */
+}
+
+/* Header text: Lewis Hamilton's name with animated gradient */
+.header h1 {
+  font-size: calc(4vw + 20px); /* Responsive font size */
+  font-family: 'Orbitron', sans-serif; /* Futuristic font */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, black, white, black); /* Shimmering metallic gradient */
+  background-size: 200%; /* Make background larger for animation */
+  color: transparent;
+  -webkit-background-clip: text; /* Clip the gradient to text */
+  background-clip: text; 
+  animation: lewisFade 4s infinite linear; /* Infinite animation for shimmering effect */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Subtle text shadow */
+  margin: 0; /* Remove default margin */
+}
+
+/* Animation for shimmering gradient text */
+@keyframes lewisFade {
+  0% { background-position: -200%; }
+  100% { background-position: 200%; }
+}
+
+/* Navigation container for menu links */
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center navigation items */
+  gap: 15px; /* Space between navigation items */
+  margin-top: 10px;
+}
+
+/* Navigation links styling */
+.navigation a {
+  color: white; /* White text color */
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none; /* Remove underline */
+  font-size: 18px;
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
+}
+
+/* Navigation hover effects */
+.navigation a:hover {
+  background-color: black; /* Dark background on hover */
+  color: white; /* White text on hover */
+}
+
+/* Hamburger menu for mobile */
+.nav-toggle {
+  display: none; /* Hide by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+/* Hamburger icon lines styling */
+.nav-toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: white; /* White color for the lines */
+  margin: 3px 0; /* Space between lines */
+}
+
+/* Responsive mobile navigation */
+@media (max-width: 700px) {
+  .navigation {
+    display: none; /* Hide navigation links */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #f9221c; /* Red background */
+    width: 100%;
+  }
+
+  .navigation a {
+    padding: 15px;
+    border-top: 1px solid white; /* Border between links */
+  }
+
+  .nav-toggle {
+    display: flex; /* Show hamburger menu */
+  }
+
+  .navigation.active {
+    display: flex; /* Show the navigation menu when active */
+  }
+
+  .main-content {
+    padding-top: 220px; /* Adjust for mobile view */
+  }
+}
+
+/* Countdown timer box container */
+.countdown-box {
+  background-color: black; /* Black background */
+  color: white; /* White text */
+  text-align: center;
+  padding: 30px 20px; /* Increased padding for better spacing */
+  max-width: 1200px; /* Set max width */
+  width: 100%;
+  border-style: solid;
+  border-color: grey;
+  border-width: 5px 0; /* Border on top and bottom */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  margin: 0 auto; /* Center the box */
+  box-sizing: border-box; /* Include padding/border in width/height */
+}
+
+/* Countdown box heading styling */
+.countdown-box h2 {
+  font-size: clamp(1.5rem, 5vw, 3rem); /* Responsive font size */
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* "Next Race Loading" text styling */
+.countdown-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem; /* Increased font size */
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+/* Countdown timer styling: flex layout with red background */
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between segments */
+  font-family: 'Orbitron', sans-serif;
+  flex-wrap: wrap;
+  padding: 15px;
+  background-color: rgba(249, 34, 28, 0.2); /* Light red background */
+  border-radius: 10px; /* Rounded corners */
+  max-width: 800px;
+  margin: 0 auto; /* Center the container */
+}
+
+/* Individual countdown segments */
+.time-segment {
+  display: flex;
+  flex-direction: column; /* Stack the numbers and labels */
+  align-items: center;
+  min-width: 80px; /* Minimum width for each segment */
+}
+
+/* Countdown numerical value styling */
+.time-value {
+  font-size: calc(min(12vw, 70px)); /* Responsive font size */
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #f9221c; /* Red color for numbers */
+  text-shadow: 0 0 10px rgba(249, 34, 28, 0.5); /* Glowing text effect */
+}
+
+/* Time label (hours, minutes, seconds) styling */
+.time-label {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Separator between time values */
+.separator {
+  font-size: 42px; /* Larger separator */
+  font-weight: bold;
+  color: #f9221c; /* Red color for separators */
+}
+
+/* Container for driver card and track card, flex layout for responsive design */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.lewis-driver-card {
+  position: relative;
+  background: black; /* Solid black background */
+  color: white;
+  width: calc(50% - 20px);
+  min-width: 250px;
+  padding: 20px;
+  border-radius: 15px;
+  border: 5px solid #f9221c;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  text-align: left;
+  flex: 1;
+}
+
+/* Transparent Lewis Hamilton PNG layered over black background */
+.lewis-driver-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url('lewishamilton.png') center/contain no-repeat;
+  opacity: 1;
+  z-index: 0; /* Behind text but above background */
+}
+
+/* Gradient overlay, still visible */
+.lewis-driver-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(249, 34, 28, 0.7),
+    rgba(217, 0, 0, 0.7),
+    rgba(255, 204, 0, 0.7)
+  );
+  opacity: 0.6;
+  z-index: 0; /* Still behind text */
+}
+
+/* Content stays on top */
+.lewis-driver-card-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+
+/* Title inside driver card */
+.lewis-driver-card h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px black; /* Black shadow for visibility */
+}
+
+/* Stats inside the driver card, stacked vertically */
+.lewis-driver-card .stats {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9); /* Darker text shadow */
+  width: 100%;
+  max-width: 350px;
+}
+
+/* Highlighted stats (bold) */
+.highlight {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px black;
+}
+
+
+/* Track card container for Lewis Hamilton's best track */
+.track-driver-card {
+  background: black;
+  color: white;
+  width: calc(50% - 20px);
+  min-width: 250px;
+  padding: 20px;
+  border-radius: 15px;
+  border: 5px solid #f9221c;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Track card title styling */
+.track-driver-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px black;
+}
+
+/* Track image responsive styling */
+.track-image {
+  width: 100%;
+  max-width: 250px; /* Control image size */
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 900px) {
+  .lewis-driver-card,
+  .track-driver-card {
+    width: 100%; /* Full width for cards on small screens */
+    flex: none;
+  }
+
+  .lewis-driver-card {
+    min-height: 350px;
+  }
+}
+
+/* Mobile styling adjustments */
+@media (max-width: 768px) {
+  .countdown-timer {
+    gap: 10px;
+  }
+
+  .time-value {
+    font-size: calc(min(10vw, 60px)); /* Adjust font size on mobile */
+  }
+
+  .separator {
+    font-size: 32px; /* Smaller separators */
+  }
+
+  .time-segment {
+    min-width: 60px; /* Smaller min width for segments */
+  }
+
+  .countdown-title {
+    font-size: 1.5rem; /* Adjust title size */
+  }
+}
+
+/* Very small screen styling */
+@media (max-width: 500px) {
+  .main-content {
+    padding-top: 240px;
+  }
+
+  .time-segment {
+    min-width: 50px;
+  }
+
+  .separator {
+    font-size: 24px;
+  }
+
+  .time-value {
+    font-size: calc(min(8vw, 40px));
+  }
+
+  .time-label {
+    font-size: 0.8rem; /* Smaller time labels */
+  }
+
+  .countdown-timer {
+    padding: 10px; /* Reduced padding */
+  }
+}
+
+/* Race calendar container styling */
+.race-calendar {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 5px solid #f9221c;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+/* Calendar heading styling */
+.race-calendar h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #f9221c;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Calendar table hidden by default */
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  display: none;
+}
+
+/* Calendar table header and cell styling */
+.calendar-table th,
+.calendar-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+/* Header for calendar table */
+.calendar-table th {
+  background-color: #f9221c;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Alternate row coloring in calendar table */
+.calendar-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Calendar toggle button styling */
+.calendar-toggle {
+  display: inline-block;
+  background-color: #f9221c;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Hover effects for the calendar toggle button */
+.calendar-toggle:hover {
+  background-color: #d31a14;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* Active state for toggle button */
+.calendar-toggle:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+/* McLaren - orange text for the winner column */
+tr.mclaren td:last-child {
+  color: #ff8700; /* Bright McLaren orange */
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+}
+
+/* Ferrari - red text for the winner column */
+tr.ferrari td:last-child {
+  color: #dc0000; /* Ferrari red */
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+}
+
+/* Red Bull - deep blue text for the winner column */
+tr.redbull td:last-child {
+  color: #1e41ff; /* Red Bull blue */
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+}
+
+
+/* Optional: distinguish sprints visually */
+tr.sprint {
+  font-weight: bold;
+}
+
+
+
+
+
+
