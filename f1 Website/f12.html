@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lewis Hamilton</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="f1project.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>Lewis Hamilton</h1>
+  <div class="nav-toggle" id="navToggle">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <nav class="navigation" id="navMenu">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Career</a>
+    <a href="#">Teammate</a>
+    <a href="#">News</a>
+  </nav>
+</header>
+
+<div class="main-content">
+  <div class="countdown-box">
+    <div class="countdown-title">NEXT RACE: <span id="race-name">Loading...</span></div>
+    <div class="countdown-timer" id="countdown">
+      <div class="time-segment">
+        <span class="time-value" id="days">00</span>
+        <span class="time-label">Days</span>
+      </div>
+      <span class="separator">:</span>
+      <div class="time-segment">
+        <span class="time-value" id="hours">00</span>
+        <span class="time-label">Hours</span>
+      </div>
+      <span class="separator">:</span>
+      <div class="time-segment">
+        <span class="time-value" id="minutes">00</span>
+        <span class="time-label">Minutes</span>
+      </div>
+      <span class="separator">:</span>
+      <div class="time-segment">
+        <span class="time-value" id="seconds">00</span>
+        <span class="time-label">Seconds</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="lewis-driver-card">
+      <div class="lewis-driver-card-content">
+        <h3>🏎️ Lewis Hamilton's 2025</h3>
+        <div class="stats">
+          <p>Current Position: <span class="highlight">#7</span></p>
+          <p>Points: <span class="highlight">53</span></p>
+          <p>Race Wins: <span class="highlight">0</span></p>
+          <p>Sprint Wins: <span class="highlight">1</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="track-driver-card">
+      <h3>🏟️ Most Successful Track</h3>
+      <img src="silverstone.png" alt="Silverstone Circuit" class="track-image">
+      <p>Track: <span class="highlight">Silverstone</span></p>
+	  <p>Poles: <span class ="highlight"> 7</span></p>
+      <p>Wins: <span class="highlight">8</span></p>
+      <p>Podiums: <span class="highlight">11</span></p>
+    </div>
+  </div>
+</div>
+
+<section class="race-calendar">
+  <h2>2025 F1 Race Calendar</h2>
+  <button class="calendar-toggle" id="toggleCalendar">Show Calendar</button>
+  <table class="calendar-table" id="calendarTable">
+    <thead>
+      <tr>
+        <th>Round</th>
+        <th>Date</th>
+        <th>Grand Prix</th>
+        <th>Location</th>
+        <th>Winner</th>
+      </tr>
+    </thead>
+    <tbody>
+  <tr class="mclaren"><!-- race 1 -->
+    <td>1</td><td>March 16</td><td>Australia</td><td>Melbourne</td><td>Lando Norris</td> 
+  </tr>
+  <tr class="ferrari sprint"><!-- sprint -->
+    <td>Sprint 1</td>
+    <td>March 22</td>
+    <td>China <span class="sprint-label">🏁 Sprint</span></td>
+    <td>China</td>
+    <td>Lewis Hamilton</td>
+  </tr>
+  <tr class="mclaren"><!-- race 2 -->
+    <td>2</td><td>March 23</td><td>China</td><td>Shanghai</td><td>Oscar Piastri</td>
+  </tr>
+  <tr class="redbull"><!-- race 3 -->
+    <td>3</td><td>April 6</td><td>Japan</td><td>Suzuka</td><td>Max Verstappen</td>
+  </tr>
+  <tr class="mclaren"><!-- race 4 -->
+    <td>4</td><td>April 13</td><td>Bahrain</td><td>Sakhir</td><td>Oscar Piastri</td>
+  </tr>
+  <tr class="mclaren"><!-- race 5 -->
+    <td>5</td><td>April 20</td><td>Saudi Arabia</td><td>Jeddah</td><td>Oscar Piastri</td>
+  </tr>
+  <tr class="mclaren sprint"><!-- sprint -->
+    <td>Sprint 2</td>
+    <td>May 3</td>
+    <td>Miami <span class="sprint-label">🏁 Sprint</span></td>
+    <td>Miami</td>
+    <td>Lando Norris</td>
+  </tr>
+  <tr class="mclaren"><!-- race 6 -->
+    <td>6</td><td>May 4</td><td>United States of America</td><td>Miami</td><td>Oscar Piastri</td>
+  </tr>
+  <tr class ="redbull"><!-- race 7 -->
+    <td>7</td><td>May 18</td><td>Italy</td><td>Imola</td><td>Max Verstappen</td>
+  </tr>
+  <tr><!-- race 8 -->
+    <td>8</td><td>May 25</td><td>Monaco</td><td>Monaco</td><td>TBD</td>
+  </tr>
+  <tr><!-- race 9 -->
+    <td>9</td><td>June 1</td><td>Spain</td><td>Barcelona</td><td>TBD</td>
+  </tr>
+  <tr><!-- race 10 -->
+    <td>10</td><td>June 15</td><td>Canada</td><td>Montréal</td><td>TBD</td>
+  </tr>
+  <tr><!-- race 11 -->
+    <td>11</td><td>June 29</td><td>Austria</td><td>Spielberg</td><td>TBD</td>
+  </tr>
+  <tr><!-- race 12 -->
+    <td>12</td><td>July 6</td><td>Great Britain</td><td>Silverstone</td><td>TBD</td>
+  </tr>
+  <tr class ="sprint">
+	<td>Sprint 3</td>
+	<td>July 26</td>
+	<td>Belgium<span class="sprint-label">🏁 Sprint</span></td>
+	<td>Belgium</td>
+	<td> TBD</td>
+	</tr>
+  <tr><!-- race 13 -->
+    <td>13</td><td>July 27</td><td>Belgium</td><td>Spa-Francorchamps</td><td>TBD</td>
+  </tr>
+  <tr><!-- race 14 -->
+    <td>14</td><td>August 3</td><td>Hungary</td><td>Budapest</td><td>TBD</td>
+  </tr>
+  <tr><!-- race 15 -->
+    <td>15</td><td>August 31</td><td>Netherlands</td><td>Zandvoort</td><td>TBD</td>
+  </tr>
+  <tr><!-- race 16 -->
+    <td>16</td><td>September 7</td><td>Italy</td><td>Monza</td><td>TBD</td>
+  </tr>
+  <tr><!-- race 17 -->
+    <td>17</td><td>September 21</td><td>Azerbaijan</td><td>Baku</td><td>TBD</td>
+  </tr>
+  <tr><!-- race 18 -->
+    <td>18</td><td>October 5</td><td>Singapore</td><td>Marina Bay</td><td>TBD</td>
+  </tr>
+  <tr class ="sprint">
+	<td>Sprint 4</td>
+	<td>October 18</td>
+	<td>Austin<span class ="sprint-label">🏁 Sprint</span></td>
+	<td>Austin</td>
+	<td>TBD</td>
+	</tr>
+  <tr><!-- race 19 -->
+    <td>19</td><td>October 19</td><td>United States</td><td>Austin</td><td>TBD</td>
+  </tr>
+  <tr><!-- race 20 -->
+    <td>20</td><td>October 26</td><td>Mexico</td><td>Mexico City</td><td>TBD</td>
+  </tr>
+  <tr class ="sprint">
+	<td>Sprint 5</td>
+	<td>November 8</td>
+	<td>São Paulo<span class ="sprint-label">🏁 Sprint</span></td>
+	<td>São Paulo</td>
+	<td>TBD</td>
+	</tr>
+  <tr><!-- race 21 -->
+    <td>21</td><td>November 9</td><td>Brazil</td><td>São Paulo</td><td>TBD</td>
+  </tr>
+  <tr><!-- race 22 -->
+    <td>22</td><td>November 22</td><td>Las Vegas</td><td>Las Vegas</td><td>TBD</td>
+  </tr>
+  <tr class ="sprint">
+	<td>Sprint 6</td>
+	<td>November 28</td>
+	<td>Lusail<span class = "sprint-label">🏁 Sprint</span></td>
+	<td>Lusail</td>
+	<td>TBD</td>
+	</tr>
+  <tr><!-- race 23 -->
+    <td>23</td><td>November 29</td><td>Qatar</td><td>Lusail</td><td>TBD</td>
+  </tr>
+  <tr><!-- race 24 -->
+    <td>24</td><td>December 6</td><td>Abu Dhabi</td><td>Yas Island</td><td>TBD</td>
+  </tr>
+</tbody>
+
+  </table>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Toggle navigation menu on mobile
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+  
+  if (navToggle) {
+    navToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+    });
+  }
+
+  // Calendar toggle functionality
+  const toggleCalendarBtn = document.getElementById('toggleCalendar');
+  const calendarTable = document.getElementById('calendarTable');
+  
+  toggleCalendarBtn.addEventListener('click', function() {
+    if (calendarTable.style.display === 'none' || calendarTable.style.display === '') {
+      calendarTable.style.display = 'table';
+      toggleCalendarBtn.textContent = 'Hide Calendar';
+    } else {
+      calendarTable.style.display = 'none';
+      toggleCalendarBtn.textContent = 'Show Calendar';
+    }
+  });
+
+  const raceSchedule = [
+    { date: new Date("March 16, 2025 04:00:00"), name: "Australian Grand Prix" },
+	{ date: new Date("March 22, 2025 03:00:00"), name: "🏁 Chinese Sprint 🏁" },
+    { date: new Date("March 23, 2025 07:00:00"), name: "Chinese Grand Prix" },
+    { date: new Date("April 6, 2025 06:00:00"), name: "Japanese Grand Prix" },
+    { date: new Date("April 13, 2025 16:00:00"), name: "Bahrain Grand Prix" },
+    { date: new Date("April 20, 2025 18:00:00"), name: "Saudi Arabian Grand Prix" },
+	{ date: new Date("May 4, 2025 17:00:00"), name: "🏁 Miami Sprint 🏁" },
+    { date: new Date("May 4, 2025 21:00:00"), name: "Miami Grand Prix" },
+    { date: new Date("May 18, 2025 14:00:00"), name: "Italian Grand Prix" },
+    { date: new Date("May 25, 2025 14:00:00"), name: "Monaco Grand Prix" },
+    { date: new Date("June 1, 2025 14:00:00"), name: "Spanish Grand Prix" },
+    { date: new Date("June 15, 2025 19:00:00"), name: "Canadian Grand Prix" },
+    { date: new Date("June 29, 2025 14:00:00"), name: "Austrian Grand Prix" },
+    { date: new Date("July 6, 2025 15:00:00"), name: "British Grand Prix" },
+	{ date: new Date("July 26, 2025 11:00:00"), name: "🏁 Belgium Sprint 🏁" },
+    { date: new Date("July 27, 2025 14:00:00"), name: "Belgian Grand Prix" },
+    { date: new Date("August 3, 2025 14:00:00"), name: "Hungarian Grand Prix" },
+    { date: new Date("August 31, 2025 14:00:00"), name: "Dutch Grand Prix" },
+    { date: new Date("September 7, 2025 14:00:00"), name: "Italian Grand Prix" },
+    { date: new Date("September 21, 2025 12:00:00"), name: "Azerbaijan Grand Prix" },
+    { date: new Date("October 5, 2025 13:00:00"), name: "Singapore Grand Prix" },
+	{ date: new Date("October 18, 2025 18:00:00"), name: "🏁 US Sprint 🏁" },
+    { date: new Date("October 19, 2025 20:00:00"), name: "United States Grand Prix" },
+    { date: new Date("October 26, 2025 20:00:00"), name: "Mexican Grand Prix" },
+	{ date: new Date("November 8, 2025 14:00:00"), name: "🏁 Brazil Sprint 🏁" },
+    { date: new Date("November 9, 2025 17:00:00"), name: "Brazilian Grand Prix" },
+	{ date: new Date("November 23, 2025 04:00:00"), name: "Las Vegas Grand Prix" },
+	{ date: new Date("November 29, 2025 14:00:00"), name: "🏁 Qatar Sprint 🏁" },
+	{ date: new Date("November 30, 2025 16:00:00"), name: "Qatar Grand Prix" },
+    { date: new Date("November 23, 2025 13:00:00"), name: "Abu Dhabi Grand Prix" },
+  ];
+  
+  let raceIndex = 0;
+  const countdownDisplay = document.querySelector("#countdown");
+  const raceNameElement = document.getElementById("race-name");
+
+  function updateCountdown() {
+    const now = new Date();
+    
+    // Find the next upcoming race
+    for(let i = 0; i < raceSchedule.length; i++) {
+      if(raceSchedule[i].date > now) {
+        raceIndex = i;
+        break;
+      }
+    }
+    
+    const raceDate = raceSchedule[raceIndex].date;
+    const raceName = raceSchedule[raceIndex].name;
+    const timeDiff = raceDate - now;
+
+    // Update race name
+    raceNameElement.textContent = raceName;
+
+    // Update countdown timer
+    if (timeDiff > 0) {
+      const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+      
+      document.getElementById("days").textContent = days.toString().padStart(2, '0');
+      document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+      document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+      document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
+    }
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+});
+</script>
+
+</body>
+</html>
