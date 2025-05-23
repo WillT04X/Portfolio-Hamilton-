@@ -426,18 +426,19 @@ body {
 /* Calendar table hidden by default */
 .calendar-table {
   width: 100%;
-  min-width: 600px;
   border-collapse: collapse;
   font-size: 1rem;
   display: none;
+  table-layout: fixed; /* evenly distributed columns */
 }
 
-/* Calendar table header and cell styling */
 .calendar-table th,
 .calendar-table td {
   border: 1px solid #ccc;
   padding: 12px;
   text-align: center;
+  white-space: normal;      /* allow text wrap */
+  word-wrap: break-word;    /* break long words */
 }
 
 /* Header for calendar table */
@@ -447,7 +448,7 @@ body {
   text-transform: uppercase;
 }
 
-/* Alternate row coloring in calendar table */
+/* Alternate row coloring */
 .calendar-table tr:nth-child(even) {
   background-color: #f9f9f9;
 }
@@ -468,23 +469,34 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* Hover effects for the calendar toggle button */
 .calendar-toggle:hover {
   background-color: #d31a14;
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
 
-/* Active state for toggle button */
 .calendar-toggle:active {
   transform: translateY(1px);
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
+
 .calendar-wrapper {
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch; 
+  -webkit-overflow-scrolling: touch;
   max-width: 100%;
 }
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 480px) {
+  .calendar-table {
+    font-size: 0.75rem;
+  }
+  .calendar-table th,
+  .calendar-table td {
+    padding: 6px 8px;
+  }
+}
+
 /* McLaren - orange text for the winner column */
 tr.mclaren td:last-child {
   color: #ff8700; /* Bright McLaren orange */
