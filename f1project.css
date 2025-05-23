@@ -426,6 +426,7 @@ body {
 /* Calendar table hidden by default */
 .calendar-table {
   width: 100%;
+  min-width: 600px;
   border-collapse: collapse;
   font-size: 1rem;
   display: none;
@@ -478,6 +479,10 @@ body {
 .calendar-toggle:active {
   transform: translateY(1px);
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+.calendar-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; 
 }
 /* McLaren - orange text for the winner column */
 tr.mclaren td:last-child {
