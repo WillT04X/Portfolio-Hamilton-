@@ -66,8 +66,7 @@
         </div>
       </div>
     </div>
-
-    <div class="track-driver-card">
+ <div class="track-driver-card">
       <h3>🏟️ Most Successful Track</h3>
       <img src="silverstone.png" alt="Silverstone Circuit" class="track-image">
       <p>Track: <span class="highlight">Silverstone</span></p>
@@ -75,6 +74,7 @@
       <p>Wins: <span class="highlight">8</span></p>
       <p>Podiums: <span class="highlight">11</span></p>
     </div>
+   
   </div>
 </div>
 
