@@ -523,6 +523,13 @@ tr.redbull td:last-child {
   font-family: 'Orbitron', sans-serif;
   text-transform: uppercase;
 }
+tr.mercedes td:last-child {
+  color: #00A19B;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+}
 
 
 /* Optional: distinguish sprints visually */
